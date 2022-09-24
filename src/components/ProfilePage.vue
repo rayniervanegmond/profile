@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
 
-    <div class="text-2xl font-bold">Raynier van Egmond - Profile Page</div>
+    <div class="text-2xl text-blue-400 font-bold">Raynier van Egmond - Profile Page</div>
     {{ msg }}
   </div>
 </template>

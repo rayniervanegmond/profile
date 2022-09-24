@@ -1,3 +1,27 @@
+#!/bin/bash
+
+
+cat >tailwind.config.js <<EOL 
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{vue, vuex, html, js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+EOL
+
+
+cat >./src/input.css <<EOL 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+EOL
+
+tailwindcss -i ./src/input.css -o ./dist/output.css
+
+cat >./public/index.html <<EOL
 <!DOCTYPE html>
 <html lang="">
   <head>
@@ -17,3 +41,4 @@
     <!-- built files will be auto injected -->
   </body>
 </html>
+EOL
